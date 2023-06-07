@@ -25,4 +25,4 @@ jobs:
         run: |
           poetry install
       - name: 'Run Black'
-        run: poetry black --diff --color --check .
+        run: poetry run black --diff --color --check .
