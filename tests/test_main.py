@@ -10,7 +10,7 @@ def test_hello_endpoint(testclient: TestClient):
 def test_get_item(testclient: TestClient):
     response = testclient.get("/item/foo")
     assert response.status_code == 200
-    assert response.json() == {"name": "foo", "price": 19.99, "is_offer": True}
+    assert response.json() == {"name": "foof", "price": 19.99, "is_offer": True}
 
 
 def test_add_item(testclient: TestClient):
