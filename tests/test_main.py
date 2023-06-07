@@ -20,3 +20,8 @@ def test_add_item(testclient: TestClient):
     assert response.status_code == 200
     response_list = testclient.get("/items")
     assert response_list.json() == [{"name": "foo", "price": 19.99, "is_offer": True}]
+
+def test_list_items(testclient: TestClient):
+    response = testclient.get("/items")
+    assert response.status_code == 200
+    assert response.json() == [{"name": "foo1", "price": 19.99, "is_offer": True}, {"name": "foo2", "price": 19.99, "is_offer": True}]
