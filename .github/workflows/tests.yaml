@@ -1,4 +1,4 @@
-name: 'Static Checks'
+name: 'Unit tests'
 on:
   push:
     branches:
